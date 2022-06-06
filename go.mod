@@ -1,5 +1,8 @@
-module github.com/GoogleCloudPlatform/golang-samples/functions/helloworld
+module github.com/call-me-maple/sleepyhead
 
 go 1.16
 
-require cloud.google.com/go/functions v1.0.0
+require (
+	github.com/GoogleCloudPlatform/functions-framework-go v1.5.3
+	github.com/cloudevents/sdk-go/v2 v2.10.0 // indirect
+)
