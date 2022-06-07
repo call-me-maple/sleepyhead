@@ -89,7 +89,7 @@ func main() (err error) {
 		}
 	} else if instance.Status == "RUNNING" {
 		log.Println("sleepyhead awake already")
-		dg.ChannelMessageSend(channelID, "sleepyhead awake already...")
+		// dg.ChannelMessageSend(channelID, "sleepyhead awake already...")
 		return
 	}
 
@@ -134,7 +134,7 @@ func isGoodMorning(dg *discordgo.Session) (gm bool, channelID string) {
 					if time.Since(message.Timestamp) <= time.Minute*3 && strings.Contains(message.Content, "gm") {
 						gm = true
 						channelID = channel.ID
-						dg.ChannelMessageSend(channelID, "checking in on sleepyhead")
+						// dg.ChannelMessageSend(channelID, "checking in on sleepyhead")
 						return
 					}
 				}
