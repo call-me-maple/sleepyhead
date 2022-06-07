@@ -5,5 +5,5 @@ steps:
     args: ['go', 'test']
     dir: ''
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['functions', 'deploy', 'sleepyhead', '--trigger-event', 'google.pubsub.topic.publish', '--trigger-resource', 'catears' '--runtime', 'go116', '--entry-point', 'HiSleepyHead']
+    args: ['functions', 'deploy', 'sleepyhead', '--trigger-event', 'google.pubsub.topic.publish', '--trigger-resource', 'catears', '--runtime', 'go116', '--entry-point', 'HiSleepyHead']
     dir: ''
