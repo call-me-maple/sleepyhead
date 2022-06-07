@@ -1,0 +1,9 @@
+steps:
+  - name: golang
+    args: ['go', 'version']
+  - name: golang
+    args: ['go', 'test']
+    dir: ''
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['functions', 'deploy', 'sleepyhead', 'google.pubsub.topic.publish', '--runtime', 'go116', '--entry-point', 'HiSleepyHead']
+    dir: ''
